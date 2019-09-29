@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">你好世界</h1>
+    <p id="p">不好</p>
+    <ul id="ul">
+
+    </ul>
+    <script>
+           //用一个变量承接在文档中‘创建’的一个元素
+           var div = document.createElement('div');
+           //将已经创建的元素放在相放的位置
+           document.body.appendChild(div);
+
+            var a = document.createElement('a');
+            a.innerHTML='你好世界';
+            document.getElementById('h1').appendChild(a);
+
+            var b = document.createElement('span');
+            b.innerHTML='不好';
+            document.getElementById('p').appendChild(b);
+            
+            // var c = document.createElement('li');
+            // var d = document.createElement('li');
+            // var h = document.createElement('li');
+            // document.getElementById('ul').appendChild(c);
+            // document.getElementById('ul').appendChild(d);
+            // document.getElementById('ul').appendChild(h);
+            // c.innerHTML='你';
+            // d.innerHTML='说';
+            // h.innerHTML='啥';
+            for(var i=0;i<10;i++){
+                var c = document.createElement('li');
+                document.getElementById('ul').appendChild(c);
+                c.innerHTML='你';
+            }
+    </script>
+</body>
+</html>

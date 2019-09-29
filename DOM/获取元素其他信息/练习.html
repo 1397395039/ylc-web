@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .a{
+          width: 200px;
+          height: 200px;
+      }
+      .b{
+          background-color: red;
+      }
+      .d{
+          background-color: blue;
+      }
+    </style>
+</head>
+<body>
+    <button id="btn">点击变蓝</button>
+    <div id="mydiv" class="a b"></div>
+    <script>
+           var div = document.getElementById('mydiv');
+           var btn = document.getElementById('btn');
+           btn.onclick = function(){
+               div.className = 'd a';
+           }
+           
+    </script>
+</body>
+</html>

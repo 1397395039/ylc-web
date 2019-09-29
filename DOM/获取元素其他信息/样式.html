@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式</title>
+    <style>
+    div{
+         width:200px;
+         height:200px;
+         background-color: blueviolet;
+    }
+    </style>
+</head>
+<body>
+    <div style="background-color: brown;"></div>
+    <script>
+         var div = document.getElementsByTagName('div');
+         //js拿到和获取的是内联
+         console.log(div[0].style.backgroundColor);
+    </script>
+</body>
+<ml>
