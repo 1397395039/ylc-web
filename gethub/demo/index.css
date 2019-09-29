@@ -1,0 +1,11 @@
+body{
+   height: 1000px;
+   background-color: aqua;
+   font-size: 14px;
+}
+#yuan{
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue;
+    border-radius: 50%;
+}
