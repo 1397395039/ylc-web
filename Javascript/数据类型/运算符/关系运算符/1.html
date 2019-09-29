@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="in1">
+     <button id="btn">点击确认</button>
+     <script>
+        var in1 = document.getElementById('in1');
+        var btn = document.getElementById('btn');
+        btn.onclick=function(){
+              if(in1.value <= 6){
+                 alert('免费吃饭')
+              }else if(in1.value >=80){
+                 alert('免费吃饭')
+              }else if(in1.value >6 && in1.value < 80){
+                  alert('自费吃饭')
+              }
+        }
+     </script>
+</body>
+</html>

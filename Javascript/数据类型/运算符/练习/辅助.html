@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id='d'>
+    <script>
+        var d=document.getElementById('d');
+        var nw=confirm('女性请点击');
+        d.oninput=function(){
+            if(nw&&d.value=='2019-03-08'){
+                alert('妇女节快乐，5折优惠');
+            }else{
+                alert('无优惠');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="qk">取款</button>
+    <div id="qkje"></div>
+    <script>
+        qk.onclick=function(){
+                var qkje = document.getElementById('qkje');
+                var a = prompt('请输入银行卡号(10位)');
+                var b = prompt('请输入银行密码');
+                var c = 1234567891;
+                var pass = 123456;
+                var zongje = Number(10000);
+                if(a==c & b==pass){
+                    var je= Number(prompt('请输入应取金额'));
+                        if(je>zongje){
+                        alert('余额不足')
+                        }else{
+                            zongje -= je
+                            alert('取款成功');
+                            qkje.innerHTML='剩余金额'+zongje;
+                        }
+                    }else{
+                        alert('您输入的账号密码有误')
+                    }
+                }
+    </script>
+</body>
+</html>
