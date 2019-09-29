@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 20px;
+            height: 20px;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>    
+</head>
+<body>
+        <div class="box red"></div>
+    <script>
+        var div = document.getElementsByTagName('red')
+        div.className = 'blue'
+    </script>
+</body>
+</html>
