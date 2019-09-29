@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+    <style></style>
+</head>
+<body>
+    账号<input type="text" id="in1">
+    <div id="div1"></div>
+    <br>
+    密码<input type="password" id="in2">
+    <div id="div2"></div>
+    <br>
+    确认密码<input type="password" id="in3">
+    <div id="div3"></div>
+    <br>
+    <input type="button" id="in4" value="注册">
+   <script>
+       var in1 = document.getElementById('in1');
+       var in2 = document.getElementById('in2');
+       var in3 = document.getElementById('in3');
+       var in4 = document.getElementById('in4');
+       var div1 = document.getElementById('div1');
+       var div2 = document.getElementById('div2');
+       var div3 = document.getElementById('div3');
+       var a = ["tom","jack","lili"];
+        in1.onblur = function(){
+             if(in1.value == ''){
+            div1.innerText = '请您输入账号';   
+             }else if(in1.value ==a[0] || in1.value == a[1] || in1.value == a[2]){
+             	div1.innerText = '该用户名重复';
+             }else{
+             	div1.innerText = '';
+             }  
+        }
+        in2.onblur = function(){
+            if(in2.value == ''){
+               div2.innerText = '请您输入密码';   
+            }else{
+               div2.innerText = ''; 
+            }
+        }
+        in3.onblur = function(){
+            if(in3.value == ''){
+               div3.innerText = '请您再次输入密码';   
+            }else if(in2.value != in3.value){
+               div3.innerText = '两次密码输入不一样，请重新输入。';   
+            }else{
+               div3.innerText = ''; 
+            }
+        }
+        in4.onclick = function(){
+        	if(in2.value == '' || in2.value == '' || in3.value == '' ){
+        		alert('账号密码不能为空');
+        		in1.value = '';
+        		in2.value = '';
+        		in3.value = '';
+        	}else if(div1.innerText == "" & div2.innerText == "" & div3.innerText == ""){
+        		alert("注册成功");
+        		in1.value = '';
+        		in2.value = '';
+        		in3.value = '';
+        	}else if(div1.innerText == '该用户名重复'){
+        		alert('该用户名重复，请重新输入');
+        		in1.value = '';
+        		in2.value = '';
+        		in3.value = '';
+        	}
+        }
+    </script>
+</body>
+</html>
