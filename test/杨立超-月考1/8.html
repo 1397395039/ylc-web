@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">你好周一</h1>
+    <button id="btn">点击替换</button>
+    <script>
+      var a = document.getElementById('h1');
+      var btn = document.getElementById('btn');
+      var myh3 = document.createElement('h3');
+      btn.onclick = function(){
+        document.body.replaceChild(myh3,a);
+      }
+    </script>
+</body>
+</html>
